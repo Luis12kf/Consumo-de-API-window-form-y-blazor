@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[9.0.19, )"
             },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[6.7.0, )"
+            },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
