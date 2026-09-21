@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IQa+a8LeYOU=",
+  "dgSpecHash": "sutgY7F+VvM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Luis Manuel\\source\\repos\\WinFormsApp1\\BlazorApp1\\BlazorApp1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Luis Manuel\\.nuget\\packages\\bootstrap\\5.3.8\\bootstrap.5.3.8.nupkg.sha512",
     "C:\\Users\\Luis Manuel\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.19\\microsoft.aspnetcore.authorization.9.0.19.nupkg.sha512",
     "C:\\Users\\Luis Manuel\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.19\\microsoft.aspnetcore.components.9.0.19.nupkg.sha512",
     "C:\\Users\\Luis Manuel\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\9.0.19\\microsoft.aspnetcore.components.analyzers.9.0.19.nupkg.sha512",
