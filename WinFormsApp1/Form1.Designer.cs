@@ -34,6 +34,7 @@ namespace WinFormsApp1
             dataGridView1 = new DataGridView();
             button1 = new Button();
             label1 = new Label();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -56,7 +57,7 @@ namespace WinFormsApp1
             button1.TabIndex = 1;
             button1.Text = "Refrescar";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += Button1_Click;
             // 
             // label1
             // 
@@ -70,22 +71,33 @@ namespace WinFormsApp1
             label1.Text = "Lista de Estudiantes";
             label1.Click += label1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(558, 65);
+            button2.Name = "button2";
+            button2.Size = new Size(112, 34);
+            button2.TabIndex = 3;
+            button2.Text = "Agregar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Lista de Estudiantes";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private async void Button1_Click(object sender, EventArgs e)
         {
             await CargarDatosGridAsync();
         }
@@ -100,5 +112,6 @@ namespace WinFormsApp1
         }
         private Button button1;
         private Label label1;
+        private Button button2;
     }
 }

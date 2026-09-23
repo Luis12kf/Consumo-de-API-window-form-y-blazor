@@ -64,14 +64,30 @@ namespace WinFormsApp1
 
         }
 
-        private async Task Button1_ClickAsync(object sender, EventArgs e)
+        // Reemplaza el método Button1_ClickAsync para corregir el error CS0119
+        private async void button1_Click(object sender, EventArgs e)
         {
-            await CargarDatosGridAsync();
+            button1.Enabled = false; // Deshabilitar el botón mientras se realiza la operación
+            try
+            {
+                await CargarDatosGridAsync();
+            }
+            finally
+            {
+                button1.Enabled = true; // Habilitar el botón después de la operación
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 FormularioEstudiantes = new Form2();
+
+            FormularioEstudiantes.Show();
         }
     }
     public class Root
