@@ -13,4 +13,8 @@
     <PackageReference Include="Microsoft.Graph" Version="6.7.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Singleton\Singleton.csproj" />
+  </ItemGroup>
+
 </Project>

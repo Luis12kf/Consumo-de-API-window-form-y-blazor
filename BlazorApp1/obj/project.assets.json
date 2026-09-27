@@ -1032,6 +1032,16 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "Singleton/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Singleton.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Singleton.dll": {}
+        }
       }
     },
     "net9.0/browser-wasm": {
@@ -2064,6 +2074,16 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Singleton/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Singleton.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Singleton.dll": {}
         }
       }
     }
@@ -3570,6 +3590,11 @@
         "system.memory.data.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Singleton/1.0.0": {
+      "type": "project",
+      "path": "../Singleton/Singleton.csproj",
+      "msbuildProject": "../Singleton/Singleton.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3579,6 +3604,7 @@
       "Microsoft.Graph >= 6.7.0",
       "Microsoft.NET.ILLink.Tasks >= 9.0.11",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 10.0.0",
+      "Singleton >= 1.0.0",
       "bootstrap >= 5.3.8"
     ]
   },
@@ -3614,7 +3640,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Luis Manuel\\source\\repos\\WinFormsApp1\\Singleton\\Singleton.csproj": {
+              "projectPath": "C:\\Users\\Luis Manuel\\source\\repos\\WinFormsApp1\\Singleton\\Singleton.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

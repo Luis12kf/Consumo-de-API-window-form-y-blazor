@@ -1,7 +1,8 @@
 ﻿@page "/"
-@using BlazorApp1.modelos
+@using Singleton.modelos
 @using System.Text.Json
 @inject HttpClient Http
+
 
 <PageTitle>Lista de estudiantes</PageTitle>
 
@@ -48,22 +49,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in estudiantes)
+                    @if (estudiantes != null)
                     {
-                        <tr>
-                            <td><strong>#@item.Id</strong></td>
-                            <td><span class="badge bg-secondary">@item.Matricula</span></td>
-                            <td>@item.Cedula</td>
-                            <td>@item.Nombre @item.Apellido</td>
-                            <td>@item.Carrera</td>
-                            <td>
-                                <div><small class="text-muted">✉</small> @item.Email</div>
-                                <div><small class="text-muted">📞</small> @item.Telefono</div>
-                            </td>
-                            <td>@item.Nacionalidad</td>
-                            <td>@item.FechaNacimiento.ToString("dd/MM/yyyy")</td>
-                            <td>@item.FechaIngreso.ToString("dd/MM/yyyy")</td>
-                        </tr>
+                        int index = 1;
+                        foreach (var item in estudiantes)
+                        {
+                            <tr>
+                                <td><strong>#@index</strong></td>
+                                <td><span class="badge bg-secondary">@item.Matricula</span></td>
+                                <td>@item.Cedula</td>
+                                <td>@item.Nombre @item.Apellido</td>
+                                <td>@item.Carrera</td>
+                                <td>
+                                    <div><small class="text-muted">✉</small> @item.Email</div>
+                                    <div><small class="text-muted">📞</small> @item.Telefono</div>
+                                </td>
+                                <td>@item.Nacionalidad</td>
+                                <td>@item.FechaNacimiento.ToString("dd/MM/yyyy")</td>
+                                <td>@item.FechaIngreso.ToString("dd/MM/yyyy")</td>
+                            </tr>
+                            index++;
+                        }
                     }
                 </tbody>
             </table>
@@ -92,5 +98,4 @@
             Console.WriteLine($"Error al consumir la API: {ex.Message}");
         }
     }
-}g
-Welcome to your new app.
+}

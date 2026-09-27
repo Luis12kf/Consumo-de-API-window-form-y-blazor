@@ -1,9 +1,42 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
-namespace BlazorApp1.modelos
+
+
+namespace Singleton.modelos
 {
     public class Root
     {
+        private static Root? _instance;
+        private static readonly object _lock = new object();
+
+        public static Root Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    lock (_lock)
+                    {
+                        if (_instance == null)
+                        {
+                            _instance = new Root();
+                        }
+                    }
+                }
+                return _instance;
+            }
+        }
+        [JsonConstructor]
+        private Root()
+        {
+            // Private constructor to prevent instantiation from outside
+        }
+
         [JsonPropertyName("id")]
         public int Id { get; set; }
 

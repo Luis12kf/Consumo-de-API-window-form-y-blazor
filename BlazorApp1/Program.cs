@@ -14,6 +14,7 @@ builder.Services.AddScoped(sp => new HttpClient
     BaseAddress = new Uri("https://pruebaestudiantes-fsa8h8hjhpcdhygm.westus-01.azurewebsites.net/")
 });
 
+
 await builder.Build().RunAsync();
 
 
